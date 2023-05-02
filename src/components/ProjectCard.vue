@@ -1,11 +1,10 @@
 <template>
 
-    <div class="card" v-for="project in projects" :key="project.id">
-        <div class="card-body">
+    <div class="card my-card" v-for="project in projects" :key="project.id">
+        <div class="card-body my-card-body">
             <h5 class="card-title">{{ project.title }}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-            <p class="card-text">{{ project.title }}</p>
-            <a :href="project.url" target="_blank" class="card-link">{{ project.title }}</a>
+            <p class="card-text">{{ project.description }}</p>
+            <a :href="project.url" target="_blank" class="card-link">{{ project.url }}</a>
         </div>
     </div>
 </template>
@@ -40,5 +39,17 @@ export default (await import('vue')).defineComponent({
 
 <style>
 
+.my-card{
+    overflow: hidden;
+}
+
+.my-card-body{
+    height: 400px;
+    overflow: auto;
+}
+
+.my-card-body::-webkit-scrollbar {
+  display: none;
+}
 
 </style>
