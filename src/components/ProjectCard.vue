@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <p v-for="project in projects" :key="project.id">{{ project.title }}</p>
+    <div class="card" v-for="project in projects" :key="project.id">
+        <p>{{ project.title }}</p>
+        <p>{{ project.description }}</p>
+        <a :href="project.url" target="_blank">{{ project.url }}</a>
     </div>
 </template>
 
@@ -17,7 +19,9 @@ export default (await import('vue')).defineComponent({
     fetchProjects(){
         axios.get('http://127.0.0.1:8000/api/projects')
         .then(res => {
-            console.log(res);
+            // console.log(res);
+            const { results } = res.data; // oppure const results = res.data.results
+            this.projects = results;
         })
         .catch(err => {
             console.log(err)
@@ -31,4 +35,9 @@ export default (await import('vue')).defineComponent({
 </script>
 
 <style>
+
+.card {
+    
+}
+
 </style>
