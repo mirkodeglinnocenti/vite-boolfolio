@@ -1,8 +1,12 @@
 <template>
+
     <div class="card" v-for="project in projects" :key="project.id">
-        <p>{{ project.title }}</p>
-        <p>{{ project.description }}</p>
-        <a :href="project.url" target="_blank">{{ project.url }}</a>
+        <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text">{{ project.title }}</p>
+            <a :href="project.url" target="_blank" class="card-link">{{ project.title }}</a>
+        </div>
     </div>
 </template>
 
@@ -36,8 +40,5 @@ export default (await import('vue')).defineComponent({
 
 <style>
 
-.card {
-    
-}
 
 </style>
