@@ -1,7 +1,15 @@
 <template>
 
     <Default>
-        Chi sono
+        <div class="about">
+            <div class="container">
+                <h1>Chi sono</h1>
+            </div>
+
+            <div class="container">
+                <p>Sono un full stack developer junior</p>
+            </div>
+        </div>
     </Default>
 
 </template>

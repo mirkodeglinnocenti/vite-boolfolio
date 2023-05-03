@@ -16,10 +16,5 @@ export default (await import('vue')).defineComponent({
 </template>
 
 <style scoped>
-.my-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
 
 </style>

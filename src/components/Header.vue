@@ -1,6 +1,6 @@
 <template>
     
-    <header>
+    <header class="main-header">
         <div class="container">
             <div class="row justify-content-between">
 
@@ -46,6 +46,10 @@ a {
     display: flex;
     gap: 30px;
     list-style: none;
+}
+
+.main-header {
+    padding: 20px 0;
 }
 
 </style>
