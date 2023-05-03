@@ -1,0 +1,25 @@
+<template>
+
+    <Default>
+        <div class="home">
+            <div class="container">
+                Home
+            </div>
+        </div>
+    </Default>
+
+</template>
+
+<script>
+import Default from '../layouts/Default.vue';
+
+export default (await import('vue')).defineComponent({
+    components: {
+        Default
+    }
+})
+</script>
+
+<style>
+
+</style>

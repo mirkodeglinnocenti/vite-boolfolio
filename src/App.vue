@@ -1,24 +1,18 @@
 <script>
 
 import ProjectCard from './components/ProjectCard.vue';
+import Default from './layouts/Default.vue';
 
 export default (await import('vue')).defineComponent({
   components: {
     ProjectCard,
+    Default
   }
 })
 </script>
 
 <template>
-  <div class="container">
-
-    <h2 class="mb-4">Lista Progetti</h2>
-
-    <div class="my-grid">
-      <ProjectCard />
-    </div>
-
-  </div>
+  <router-view></router-view>
 </template>
 
 <style scoped>
