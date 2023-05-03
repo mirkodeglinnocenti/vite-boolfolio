@@ -1,12 +1,14 @@
 <template>
-
-    <Default>
+    <div>
+        <Default>
         <div class="home">
             <div class="center">
                 <h1 class="title">Home</h1>
             </div>
         </div>
-    </Default>
+        </Default>
+    </div>
+    
 
 </template>
 

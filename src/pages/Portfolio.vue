@@ -1,6 +1,8 @@
 <template>
 
-<Default>
+<div>
+  <Default>
+  
   <div class="my-grid">
     <div class="card my-card" v-for="project in projects" :key="project.id">
       <div class="card-body my-card-body">
@@ -16,8 +18,9 @@
       </div>
     </div>
   </div>
-  
-</Default>
+    
+  </Default>
+</div>
     
 </template>
 

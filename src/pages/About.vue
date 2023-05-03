@@ -1,6 +1,7 @@
 <template>
 
-    <Default>
+    <div>
+        <Default>
         <div class="about">
             <div class="container">
                 <h1>Chi sono</h1>
@@ -10,7 +11,8 @@
                 <p>Sono un full stack developer junior</p>
             </div>
         </div>
-    </Default>
+        </Default>
+    </div>
 
 </template>
 
