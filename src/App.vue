@@ -32,6 +32,4 @@ export default (await import('vue')).defineComponent({
 .fade-leave-to {
   opacity: 0;
 }
-
-
 </style>

@@ -4,19 +4,28 @@
   <Default>
   
   <div class="my-grid">
+    
+
     <div class="card my-card" v-for="project in projects" :key="project.id">
-      <div class="card-body my-card-body">
-        <h5 class="card-title">{{ project.title }}</h5>
-        <p class="card-text"><strong>tipologia:</strong> {{ project.type ? project.type.type : " - " }}</p>
-        <p><strong>Tecnologie:</strong></p>
-        <ul class="d-flex gap-2" v-if="project.technologies && project.technologies.length > 0">
-            <li class="badge rounded-pill text-bg-warning" v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}</li>
-        </ul>
-        <p v-else>-</p>
-        <p class="card-text">{{ project.description }}</p>
-        <a :href="project.url" target="_blank" class="card-link">{{ project.url }}</a>
-      </div>
+
+      <router-link :to="{ name: 'projects.show', params: { slug: project.slug }}">
+
+        <div class="card-body my-card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text"><strong>tipologia:</strong> {{ project.type ? project.type.type : " - " }}</p>
+          <p><strong>Tecnologie:</strong></p>
+          <ul class="d-flex gap-2" v-if="project.technologies && project.technologies.length > 0">
+              <li class="badge rounded-pill text-bg-warning" v-for="technology in project.technologies" :key="technology.id">{{ technology.name }}</li>
+          </ul>
+          <p v-else>-</p>
+          <p class="card-text">{{ project.description }}</p>
+          <a :href="project.url" target="_blank" class="card-link">{{ project.url }}</a>
+        </div>
+
+      </router-link>
     </div>
+
+    
   </div>
     
   </Default>
@@ -35,7 +44,7 @@ export default (await import('vue')).defineComponent({
   },
   data() {
     return {
-        projects: [],
+      projects: [],
     }
   },
   methods:{
