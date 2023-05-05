@@ -27,4 +27,8 @@
 
 <style>
 
+.about{
+    min-height: 60vh;
+}
+
 </style>
